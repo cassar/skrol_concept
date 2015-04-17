@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SkrollApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,9 +12,15 @@
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this template --> 
     <link href="jumbotron.css" rel="stylesheet">
-  <%= render 'layouts/shim' %>
+    
+    <title>Skroll App</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    
+    <%= render 'layouts/shim' %>
 </head>
 <body>
 <%= render 'layouts/header' %>
@@ -26,13 +28,13 @@
 <%= render 'layouts/footer' %>
 
 
-    <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript (This was messing with my marquee js so is commmented out)
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
   
 </body>
 </html>

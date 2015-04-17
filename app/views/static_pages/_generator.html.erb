@@ -1,5 +1,8 @@
+  <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>  
     <div class="jumbotron">
       <div class="container">
-        <%= Sentence.first.EnglishSentence %> 
+        <div class="marquee"><%= Sentence.first.GermanSentence %></div>
+        <div class="marquee"><%= Sentence.first.GermanPhonetic %></div>
+        <div class="marquee"><%= Sentence.first.EnglishSentence %></div>
       </div>
     </div>
