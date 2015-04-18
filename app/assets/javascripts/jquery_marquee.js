@@ -1,3 +1,9 @@
 $(document).ready(function() {
-  $('.marquee').marquee({pauseOnHover: true});
+var $mq = $('.marquee').marquee();
+
+//Pause
+$('.marquee').hover(function(){
+  $mq.marquee('toggle');
 });
+});
+
