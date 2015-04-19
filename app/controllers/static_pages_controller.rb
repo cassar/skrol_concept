@@ -13,6 +13,14 @@ class StaticPagesController < ApplicationController
       @EnglishSentenceMarquee << sentence.EnglishSentence 
     end
 
+=begin
+    @InstanceMarquee(LanguageAType) 
+      @InstanceArray = []
+      @sentence.each do |sentence|
+        @InstanceArray << sentence.LanguageAType
+      end  
+    end
+=end
   end
 end
 
