@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416140228) do
+ActiveRecord::Schema.define(version: 20150419154205) do
 
   create_table "sentences", force: :cascade do |t|
-    t.string   "EnglishSentence"
-    t.string   "EnglishPhonetic"
-    t.string   "GermanSentence"
-    t.string   "GermanPhonetic"
-    t.string   "JapaneseSentence"
-    t.string   "JapaneseRomaji"
+    t.string   "english_sentence"
+    t.string   "english_phonetic"
+    t.string   "german_sentence"
+    t.string   "german_phonetic"
+    t.string   "japanese_sentence"
+    t.string   "japanese_romaji"
     t.string   "image"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

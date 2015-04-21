@@ -26,10 +26,16 @@ body {
   }
 }
 
+/* Generator */
+
 .marquee {
   width: 1200px;
   overflow: hidden;
   border: 1px solid #ccc;
   background: white;
   font-size: 5em;
+}
+
+td {
+  padding-right: 1em;
 }

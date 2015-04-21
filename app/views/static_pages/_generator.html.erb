@@ -1,9 +1,41 @@
 <div class="jumbotron">
   <div class="container">
-    
-    <div class="marquee"><%= @GermanSentenceMarquee.join ' ' %></div>
-    <div class="marquee"><%= @GermanPhoneticMarquee.join ' ' %></div>
-    <div class="marquee"><%= @EnglishSentenceMarquee.join ' ' %></div> 
-    
+    <div class="marquee">
+      <table>
+        <tr class='german'>
+          <% @GermanSentenceMarquee.each do |sentence| %>
+          <td><%= sentence %></td>
+          <% end %>
+        </tr>
+        <tr class= 'german'>
+          <% @GermanPhoneticMarquee.each do |sentence| %>
+          <td><%= sentence %></td>
+          <% end %>
+        </tr>
+        <tr class= 'japanese'>
+          <% @JapaneseSentenceMarquee.each do |sentence| %>
+          <td><%= sentence %></td>
+          <% end %>
+        </tr>
+        <tr class= 'japanese'>
+          <% @JapaneseRomajiMarquee.each do |sentence| %>
+          <td><%= sentence %></td>
+          <% end %>
+        </tr>
+        <tr class= 'english'>
+          <% @EnglishSentenceMarquee.each do |sentence| %>
+          <td><%= sentence %></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <div>
+      <button type="button" class="btn btn-primary" id='german'>German</button>
+      <button type="button" class="btn btn-primary" id='japanese'>Japanese</button>
+      <button type="button" class="btn btn-primary" id='english'>English</button>
+    </div>
   </div>
 </div>
+
+<!-- Need a (client side) function  to switch between languages. -->

@@ -2,58 +2,34 @@ class StaticPagesController < ApplicationController
   def home
     
     @sentence = Sentence.all
-    
+
     @GermanSentenceMarquee = []
     @GermanPhoneticMarquee = []
+    @JapaneseSentenceMarquee= []
+    @JapaneseRomajiMarquee = []
     @EnglishSentenceMarquee = []
-    
-    @sentence.each do |sentence| 
-      @GermanSentenceMarquee << sentence.GermanSentence; 
-      @GermanPhoneticMarquee << sentence.GermanPhonetic; 
-      @EnglishSentenceMarquee << sentence.EnglishSentence 
-    end
 
-=begin
-    @InstanceMarquee(LanguageAType) 
-      @InstanceArray = []
-      @sentence.each do |sentence|
-        @InstanceArray << sentence.LanguageAType
-      end  
+   
+    @sentence.each do |sentence|
+      @GermanSentenceMarquee << sentence.german_sentence
+      @GermanPhoneticMarquee << sentence.german_phonetic
+      @JapaneseSentenceMarquee << sentence.japanese_sentence
+      @JapaneseRomajiMarquee << sentence.japanese_romaji
+      @EnglishSentenceMarquee << sentence.english_sentence
     end
-=end
   end
 end
 
+
 =begin
 
-    #Declare an instance variable.
-    #Create an array with all the relevant column heads.
-    #loop through and Measure the length of every string in a line. 
-    #Find sentence with the greatest length.
-    #Add spaces before and after smaller sentences so that their length increases to that of the longest sentence.
-    #Add all the new instances of the sentences into the same position in an arrray.
-
-
-    
-    RelaventColumns = [GermanSentence, GermanPhonetic, EnglishSentence] 
-    
-    RelaventColumns do |s| 
-      s.length
-      s = RelaventColumnsLength(s-1)
+  #I'm tring to make a function that can be called within the view. Currently showing " undefined method `InstanceMarquee' "
+  
+    def InstanceMarquee(language_type)  
+      @instanceArray = []
+      @sentence.each do |sentence|
+        @instanceArray << sentence.language_type
+      end
     end
     
-    RelaventColumnsLength.greatest = GreatestLength
-      
-    for each |s| in RelaventColumns do
-      if s.length < GreatestLength
-        GreatestLength - s.length = sDifference
-          if sDifference.even? = true
-            "Add half to the start and half to the end"
-          elsif sDifference.even? = false
-            "Add sDifference/2 + 0.5 to start and sDifference/2 - 0.5 to the end"
-          end
-        s = RelevantColumn[x]
-      else
-        s = RelevantColumn[x]
-    end
-=end 
+=end
