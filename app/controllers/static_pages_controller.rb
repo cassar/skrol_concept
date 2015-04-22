@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
     
     @sentence = Sentence.all
 
+
     @GermanSentenceMarquee = []
     @GermanPhoneticMarquee = []
     @JapaneseSentenceMarquee= []
@@ -17,12 +18,9 @@ class StaticPagesController < ApplicationController
       @JapaneseRomajiMarquee << sentence.japanese_romaji
       @EnglishSentenceMarquee << sentence.english_sentence
     end
-  end
-end
 
 
 =begin
-
   #I'm tring to make a function that can be called within the view. Currently showing " undefined method `InstanceMarquee' "
   
     def InstanceMarquee(language_type)  
@@ -30,6 +28,9 @@ end
       @sentence.each do |sentence|
         @instanceArray << sentence.language_type
       end
+      return @instanceArray
     end
+=end    
     
-=end
+  end
+end
