@@ -24,6 +24,6 @@ class SentencesController < ApplicationController
   private
 
     def sentence_params
-      params.require(:sentence).permit(:EnglishSentence, :EnglishPhonetic, :GermanSentence, :GermanPhonetic, :JapaneseSentence, :JapaneseRomaji, :image)
+      params.require(:sentence).permit(:english_sentence, :english_phonetic, :german_sentence, :german_phonetic, :japanese_sentence, :japanese_romaji, :image)
     end
 end

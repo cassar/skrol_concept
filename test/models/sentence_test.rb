@@ -3,12 +3,12 @@ require 'test_helper'
 class SentenceTest < ActiveSupport::TestCase
 def setup
     @sentence = Sentence.new(
-      EnglishSentence: "This is a Engish Sentence example", 
-      EnglishPhonetic: "This is a English Phonetic example", 
-      GermanSentence: "This is a German Sentence example", 
-      GermanPhonetic: "This is a German Phonetic example",
-      JapaneseSentence: "This is as Japanese Sentence example",
-      JapaneseRomaji: "This is a Japanese Romaji example",
+      english_sentence: "This is a Engish Sentence example", 
+      english_phonetic: "This is a English Phonetic example", 
+      german_sentence: "This is a German Sentence example", 
+      german_phonetic: "This is a German Phonetic example",
+      japanese_sentence: "This is as Japanese Sentence example",
+      japanese_romaji: "This is a Japanese Romaji example",
       image: "Casa Stark.jpg") 
 end
   
@@ -21,33 +21,33 @@ end
     assert_not @sentence.valid?
   end
   
-  test "EnglishSentence should be present" do
-    @sentence.EnglishSentence = "     "
+  test "Englsh sentence should be present" do
+    @sentence.english_sentence = "     "
     assert_not @sentence.valid?
   end
   
-  test "EnglishPhonetic should be present" do
-    @sentence.EnglishPhonetic = "     "
+  test "English phonetic should be present" do
+    @sentence.english_phonetic = "     "
     assert_not @sentence.valid?
   end
   
-  test "GermanSentence should be present" do
-    @sentence.GermanSentence = "     "
+  test "German sentence should be present" do
+    @sentence.german_sentence = "     "
     assert_not @sentence.valid?
   end
   
-  test "GermanPhonetic should be present" do
-    @sentence.GermanPhonetic = "     "
+  test "German phonetic should be present" do
+    @sentence.german_phonetic = "     "
     assert_not @sentence.valid?
   end
   
-  test "JapaneseSentence should be present" do
-    @sentence.JapaneseSentence = "     "
+  test "Japanese sentence should be present" do
+    @sentence.japanese_sentence = "     "
     assert_not @sentence.valid?
   end
   
-  test "JapaneseRomaji should be present" do
-    @sentence.JapaneseRomaji = "     "
+  test "Japanese romaji should be present" do
+    @sentence.japanese_romaji = "     "
     assert_not @sentence.valid?
   end
 end
