@@ -34,7 +34,18 @@ class StaticPagesController < ApplicationController
   
   def japanese 
     
+    require 'bing_translator'
+    
     @sentence = Sentence.all
+    
+    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
+    
+    @sentence.each do |sentence|
+      if sentence.japanese_sentence.nil? == true
+        sentence.japanese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'ja')
+        sentence.save
+      end  
+    end  
     
     @JapaneseSentenceMarquee= []
     @JapaneseRomajiMarquee = []
@@ -47,5 +58,33 @@ class StaticPagesController < ApplicationController
     end
     
   end
+  
+  def portuguese 
+    
+    require 'bing_translator'
+    
+    @sentence = Sentence.all
+    
+    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
+    
+    @sentence.each do |sentence|
+      if sentence.portuguese_sentence.nil? == true
+        sentence.portuguese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'pt')
+        sentence.save
+      end  
+    end  
+    
+    @PortugueseSentenceMarquee= []
+    @PortuguesePhoneticMarquee = []
+    @EnglishSentenceMarquee = []
+    
+    @sentence.each do |sentence|
+      @PortugueseSentenceMarquee << sentence.portuguese_sentence
+      @PortuguesePhoneticMarquee << sentence.portuguese_phonetic
+      @EnglishSentenceMarquee << sentence.english_sentence
+    end
+    
+  end
+
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150419154205) do
+ActiveRecord::Schema.define(version: 20150423165253) do
 
   create_table "sentences", force: :cascade do |t|
     t.string   "english_sentence"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20150419154205) do
     t.string   "japanese_sentence"
     t.string   "japanese_romaji"
     t.string   "image"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "portuguese_sentence"
+    t.string   "portuguese_phonetic"
   end
 
 end

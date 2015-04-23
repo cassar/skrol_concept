@@ -2,8 +2,17 @@
     <div class="container">
       <h2>Hello, Welcome to Skroll.</h2>
       <p>Please select which language you would like to learn below...</p>
-        <li><%= link_to "German",   german_path %></li>
-        <li><%= link_to "Japanese",   japanese_path %></li>
+      <div class="row">
+        <br>
+        <br>
+        <br>
+        <%= link_to "German", german_path, class: "languagebuttons" %>
+        <%= link_to "Japanese", japanese_path, class: "languagebuttons" %>
+        <%= link_to "Portuguese", portuguese_path, class: "languagebuttons" %>
+        <br>
+        <br>
+        <br>
+      </div>
     </div>
   </div>
 
