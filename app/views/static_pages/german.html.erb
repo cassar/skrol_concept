@@ -12,16 +12,6 @@
           <td><%= sentence %></td>
           <% end %>
         </tr>
-        <tr class= 'japanese'>
-          <% @JapaneseSentenceMarquee.each do |sentence| %>
-          <td><%= sentence %></td>
-          <% end %>
-        </tr>
-        <tr class= 'japanese'>
-          <% @JapaneseRomajiMarquee.each do |sentence| %>
-          <td><%= sentence %></td>
-          <% end %>
-        </tr>
         <tr class= 'english'>
           <% @EnglishSentenceMarquee.each do |sentence| %>
           <td><%= sentence %></td>
@@ -32,10 +22,8 @@
     <br>
     <div>
       <button type="button" class="btn btn-primary" id='german'>German</button>
-      <button type="button" class="btn btn-primary" id='japanese'>Japanese</button>
       <button type="button" class="btn btn-primary" id='english'>English</button>
     </div>
   </div>
 </div>
-
-<!-- Need a (client side) function  to switch between languages. -->
+ <%= render 'static_pages/feature_columns' %>

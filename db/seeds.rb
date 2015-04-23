@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+=begin
 sentences = Sentence.create(
   english_sentence: "The rats go through the house.", 
   english_phonetic: "ðiː ɹæts ɡəʊ θɹuː ðiː haʊs",
@@ -87,3 +88,33 @@ sentences = Sentence.create(
   japanese_sentence: "エジンバラはスコットランドの首都です。",
   japanese_romaji:"Ejinbara wa Sukottorando no shutodesu.",
   image: "Edinburgh.jpg")  
+=end
+
+#http://www.treksplorer.com/foreign-language-survival-phrases/ 
+
+#Basic Phrases & Greetings
+
+sentences = Sentence.create( english_sentence: "Hello!" )
+sentences = Sentence.create( english_sentence: "How are you? / What’s up?" )
+sentences = Sentence.create( english_sentence: "I’m fine. And you?" )
+sentences = Sentence.create( english_sentence: "Please." )
+sentences = Sentence.create( english_sentence: "Thank you. / Thank you very much." )
+sentences = Sentence.create( english_sentence: "Goodbye. / Bye. / See you soon." )
+sentences = Sentence.create( english_sentence: "Cheers!" )
+sentences = Sentence.create( english_sentence: "Excuse me." )
+sentences = Sentence.create( english_sentence: "I’m sorry." )
+sentences = Sentence.create( english_sentence: "What’s your name?" )
+sentences = Sentence.create( english_sentence: "I’m… / My name is… / I am called…" )
+sentences = Sentence.create( english_sentence: "Nice to meet you." )
+sentences = Sentence.create( english_sentence: "Where are you from?" )
+sentences = Sentence.create( english_sentence: "I’m from…" )
+sentences = Sentence.create( english_sentence: "I’d like to introduce my friend/wife/husband." )
+sentences = Sentence.create( english_sentence: "How old are you?" )
+sentences = Sentence.create( english_sentence: "I’m… years old." )
+sentences = Sentence.create( english_sentence: "What do you do for a living?" )
+sentences = Sentence.create( english_sentence: "I’m a/an…" )
+sentences = Sentence.create( english_sentence: "What do you do for fun? / What are your hobbies?" )
+sentences = Sentence.create( english_sentence: "I (don’t) like…" )
+sentences = Sentence.create( english_sentence: "Yes." )
+sentences = Sentence.create( english_sentence: "No." )
+
