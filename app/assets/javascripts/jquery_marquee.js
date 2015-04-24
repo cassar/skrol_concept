@@ -8,7 +8,12 @@ var $mq = $('.marquee').marquee({
 
 
 //Stop Start
+
 $('#stop-start').click(function(){
+  $mq.marquee('toggle');
+});
+
+$('.marquee').hover(function(){
   $mq.marquee('toggle');
 });
 
