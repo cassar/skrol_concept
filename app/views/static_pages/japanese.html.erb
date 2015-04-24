@@ -2,12 +2,12 @@
   <div class="container">
     <div class="marquee">
       <table>
-        <tr class= 'japanese'>
+        <tr class= 'target-language'>
           <% @JapaneseSentenceMarquee.each do |sentence| %>
           <td><%= sentence %></td>
           <% end %>
         </tr>
-        <tr class= 'japanese'>
+        <tr class= 'target-language'>
           <% @JapaneseRomajiMarquee.each do |sentence| %>
           <td><%= sentence %></td>
           <% end %>
@@ -21,8 +21,20 @@
     </div>
     <br>
     <div>
-      <button type="button" class="btn btn-primary" id='japanese'>Japanese</button>
-      <button type="button" class="btn btn-primary" id='english'>English</button>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary" id='target-language'>Japanese</button>
+        <button type="button" class="btn btn-default" id='target-language-toggle'>On</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary" id='english'>English</button></button>
+        <button type="button" class="btn btn-default" id='english-toggle'>On</button>
+      </div>
+      <button type="button" class="btn btn-primary" id='stop-start'>Stop</button>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary"><b>-</b></button>
+        <button type="button" class="btn btn-default" disabled="disabled">(speed)</button>
+        <button type="button" class="btn btn-primary"><b>+</b></button>
+      </div>
     </div>
   </div>
 </div>

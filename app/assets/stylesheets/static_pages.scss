@@ -20,6 +20,7 @@ body {
   color: white;
   letter-spacing: -1px;
   padding-top: 5px;
+  padding-bottom: 5px;
   &:hover {
     color: gray;
     text-decoration: none;
@@ -29,43 +30,15 @@ body {
 /* Generator */
 
 .marquee {
-  width: 1200px;
   overflow: hidden;
   border: 1px solid #ccc;
   background: white;
-  font-size: 5em;
+  font-size: 4em;
 }
 
 td {
   padding-right: 1em;
 }
 
-/* Front Page */
 
-.languagebuttons {
-  background: #ffffff;
-  background-image: -webkit-linear-gradient(top, #ffffff, #d0d6d9);
-  background-image: -moz-linear-gradient(top, #ffffff, #d0d6d9);
-  background-image: -ms-linear-gradient(top, #ffffff, #d0d6d9);
-  background-image: -o-linear-gradient(top, #ffffff, #d0d6d9);
-  background-image: linear-gradient(to bottom, #ffffff, #d0d6d9);
-  -webkit-border-radius: 6;
-  -moz-border-radius: 6;
-  border-radius: 6px;
-  font-family: Arial;
-  color: #0a0a0a;
-  font-size: 20px;
-  padding: 39px;
-  text-decoration: none;
-}
-
-.languagebuttons:hover {
-  background: #d4e0e6;
-  background-image: -webkit-linear-gradient(top, #d4e0e6, #8d979e);
-  background-image: -moz-linear-gradient(top, #d4e0e6, #8d979e);
-  background-image: -ms-linear-gradient(top, #d4e0e6, #8d979e);
-  background-image: -o-linear-gradient(top, #d4e0e6, #8d979e);
-  background-image: linear-gradient(to bottom, #d4e0e6, #8d979e);
-  text-decoration: none;
-}
 
