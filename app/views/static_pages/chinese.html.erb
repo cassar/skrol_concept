@@ -1,0 +1,11 @@
+<% @target_language = "Chinese_Traditional" %>
+<% @target_phonetic = "Chinese_Simplified" %>
+<% @target_language_marquee = @ChineseTraditionalMarquee %>
+<% @target_phonetic_marquee = @ChineseSimplifiedMarquee %>
+<div class="jumbotron">
+  <div class="container">
+     <%= render 'static_pages/generator_marquee'%>
+    <br>
+  </div>
+</div>
+<%= render 'static_pages/feature_columns' %>

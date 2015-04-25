@@ -23,6 +23,10 @@ $('#target-language').click(function(){
    $('.target-language').toggle();
 });
 
+$('#target-phonetic').click(function(){
+   $('.target-phonetic').toggle();
+});
+
 $('#english').click(function(){
    $('.english').toggle();
 });
@@ -32,23 +36,31 @@ $('#english').click(function(){
 $(function(){
    $("#stop-start").click(function () {
       $(this).text(function(i, text){
-          return text === "Stop" ? "Start" : "Stop";
+          return text === "Skrolling" ? "Stopped" : "Skrolling";
       });
    });
 });
 
 $(function(){
    $("#target-language").click(function () {
-      $("#target-language-toggle").text(function(i, text){
-          return text === "On" ? "Off" : "On";
+      $(this).text(function(i, text){
+          return text === "-" ? "+" : "-";
+      });
+   });
+});
+
+$(function(){
+   $("#target-phonetic").click(function () {
+      $(this).text(function(i, text){
+          return text === "-" ? "+" : "-";
       });
    });
 });
 
 $(function(){
    $("#english").click(function () {
-      $("#english-toggle").text(function(i, text){
-          return text === "On" ? "Off" : "On";
+      $(this).text(function(i, text){
+          return text === "-" ? "+" : "-";
       });
    });
 });

@@ -1,41 +1,11 @@
+<% @target_language = "Portuguese" %>
+<% @target_phonetic = "Spanish" %>
+<% @target_language_marquee = @PortugueseSentenceMarquee %>
+<% @target_phonetic_marquee = @PortuguesePhoneticMarquee %>
 <div class="jumbotron">
   <div class="container">
-    <div class="marquee">
-      <table>
-        <tr class= 'target-language'>
-          <% @PortugueseSentenceMarquee.each do |sentence| %>
-          <td><%= sentence %></td>
-          <% end %>
-        </tr>
-        <tr class= 'target-language'>
-          <% @PortuguesePhoneticMarquee.each do |sentence| %>
-          <td><%= sentence %></td>
-          <% end %>
-        </tr>
-        <tr class= 'english'>
-          <% @EnglishSentenceMarquee.each do |sentence| %>
-          <td><%= sentence %></td>
-          <% end %>
-        </tr>
-      </table>
-    </div>
+     <%= render 'static_pages/generator_marquee'%>
     <br>
-    <div>
-      <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-primary" id='target-language'>Portuguese</button>
-        <button type="button" class="btn btn-default" id='target-language-toggle' disabled="disabled">On</button>
-      </div>
-      <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-primary" id='english'>English</button></button>
-        <button type="button" class="btn btn-default" id='english-toggle' disabled="disabled">On</button>
-      </div>
-      <button type="button" class="btn btn-primary" id='stop-start'>Stop</button>
-      <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-primary"><b>-</b></button>
-        <button type="button" class="btn btn-default" disabled="disabled">(speed)</button>
-        <button type="button" class="btn btn-primary"><b>+</b></button>
-      </div>
-    </div>
   </div>
 </div>
- <%= render 'static_pages/feature_columns' %>
+<%= render 'static_pages/feature_columns' %>

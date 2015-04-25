@@ -29,7 +29,6 @@ class StaticPagesController < ApplicationController
       @EnglishSentenceMarquee << sentence.english_sentence
     end
     
-    
   end
   
   def japanese 
@@ -72,6 +71,13 @@ class StaticPagesController < ApplicationController
         sentence.portuguese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'pt')
         sentence.save
       end  
+    end 
+    
+    @sentence.each do |sentence|
+      if sentence.portuguese_phonetic.nil? == true
+        sentence.portuguese_phonetic = translator.translate(sentence.english_sentence, :from => 'en', :to => 'es')
+        sentence.save
+      end  
     end  
     
     @PortugueseSentenceMarquee= []
@@ -86,5 +92,38 @@ class StaticPagesController < ApplicationController
     
   end
 
+  def chinese
+    
+    require 'bing_translator'
+    
+    @sentence = Sentence.all
+    
+    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
+    
+    @sentence.each do |sentence|
+      if sentence.chinese_traditional.nil? == true
+        sentence.chinese_traditional = translator.translate(sentence.english_sentence, :from => 'en', :to => 'zh-CHT')
+        sentence.save
+      end  
+    end  
+    
+    @sentence.each do |sentence|
+      if sentence.chinese_simplified.nil? == true
+        sentence.chinese_simplified = translator.translate(sentence.english_sentence, :from => 'en', :to => 'zh-CHS')
+        sentence.save
+      end  
+    end  
+    
+    @ChineseTraditionalMarquee = []
+    @ChineseSimplifiedMarquee = []
+    @EnglishSentenceMarquee = []
+    
+    @sentence.each do |sentence|
+      @ChineseTraditionalMarquee << sentence.chinese_traditional
+      @ChineseSimplifiedMarquee << sentence.chinese_simplified
+      @EnglishSentenceMarquee << sentence.english_sentence
+    end
+    
+  end
 
 end

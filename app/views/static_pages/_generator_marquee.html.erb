@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <td class:"toggle-buttons">
+      <table>
+        <tr>
+          <td><button class="btn btn-primary btn-circle" title=<%= @target_language %> id='target-language'>-</button></td> 
+        </tr>
+        <tr>
+          <td><button class="btn btn-primary btn-circle" title=<%= @target_phonetic %> id='target-phonetic'>-</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn btn-primary btn-circle" title="English" id='english'>-</button></td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <div class="marquee">
+        <table>
+          <tr class='target-language'>
+            <% @target_language_marquee.each do |sentence| %>
+            <td><%= sentence %></td>
+            <% end %>
+          </tr>
+          <tr class= 'target-phonetic'>
+            <% @target_phonetic_marquee.each do |sentence| %>
+            <td><%= sentence %></td>
+            <% end %>
+          </tr>
+          <tr class= 'english'>
+            <% @EnglishSentenceMarquee.each do |sentence| %>
+            <td><%= sentence %></td>
+            <% end %>
+          </tr>
+        </table>
+      </div>
+      <br>
+      <div>
+        <%= render 'static_pages/generator_controls'%>
+      </div>
+    </td>
+  </tr>
+</table>

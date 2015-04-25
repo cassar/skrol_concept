@@ -92,7 +92,7 @@ sentences = Sentence.create(
 
 #http://www.treksplorer.com/foreign-language-survival-phrases/ 
 
-sentences = Sentence.create( english_sentence: "# Basic Phrases & Greetings" )
+sentences = Sentence.create( english_sentence: "# Basic Phrases and Greetings" )
 sentences = Sentence.create( english_sentence: "Hello!" )
 sentences = Sentence.create( english_sentence: "How are you? / What’s up?" )
 sentences = Sentence.create( english_sentence: "I’m fine. And you?" )
@@ -117,7 +117,7 @@ sentences = Sentence.create( english_sentence: "I (don’t) like…" )
 sentences = Sentence.create( english_sentence: "Yes." )
 sentences = Sentence.create( english_sentence: "No." )
 
-sentences = Sentence.create( english_sentence: "# Language & Communication" )
+sentences = Sentence.create( english_sentence: "# Language and Communication" )
 sentences = Sentence.create( english_sentence: "Do you speak…?" )
 sentences = Sentence.create( english_sentence: "I (don’t) understand." )
 sentences = Sentence.create( english_sentence: "I speak a little…" )
@@ -130,7 +130,7 @@ sentences = Sentence.create( english_sentence: "What does… mean?" )
 sentences = Sentence.create( english_sentence: "What time is it?" )
 sentences = Sentence.create( english_sentence: "It’s (five) o’clock." )
 
-sentences = Sentence.create( english_sentence: "# Shopping & Money" ) 
+sentences = Sentence.create( english_sentence: "# Shopping and Money" ) 
 sentences = Sentence.create( english_sentence: "How much?" )
 sentences = Sentence.create( english_sentence: "I would like…" )
 sentences = Sentence.create( english_sentence: "Can I pay by credit card/debit card?" )
@@ -162,7 +162,7 @@ sentences = Sentence.create( english_sentence: "Where could I rent a bike/car?" 
 sentences = Sentence.create( english_sentence: "I’d like to rent a bike/car." )
 
 
-sentences = Sentence.create( english_sentence: "# Eating & Drinking" )
+sentences = Sentence.create( english_sentence: "# Eating and Drinking" )
 sentences = Sentence.create( english_sentence: "Could you recommend a good restaurant?" )
 sentences = Sentence.create( english_sentence: "What would you recommend?" )
 sentences = Sentence.create( english_sentence: "What are some local specialties?" )
@@ -203,7 +203,7 @@ sentences = Sentence.create( english_sentence: "The TV/air conditioner/lamp in m
 sentences = Sentence.create( english_sentence: "Could I get a different room?" )
 sentences = Sentence.create( english_sentence: "Is there a restaurant here?" )
 
-sentences = Sentence.create( english_sentence: "# Health & Emergencies" )
+sentences = Sentence.create( english_sentence: "# Health and Emergencies" )
 sentences = Sentence.create( english_sentence: "Help!" )
 sentences = Sentence.create( english_sentence: "I need a doctor/dentist/police officer." )
 sentences = Sentence.create( english_sentence: "Is there pharmacy nearby?" )
