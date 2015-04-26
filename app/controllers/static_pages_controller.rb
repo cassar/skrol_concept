@@ -126,4 +126,32 @@ class StaticPagesController < ApplicationController
     
   end
 
+  def maltese
+    
+    require 'bing_translator'
+    
+    @sentence = Sentence.all
+    
+    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
+    
+    @sentence.each do |sentence|
+      if sentence.maltese_sentence.nil? == true
+        sentence.chinese_traditional = translator.translate(sentence.english_sentence, :from => 'en', :to => 'mt')
+        sentence.save
+      end  
+    end  
+    
+    @MalteseSentenceMarquee = []
+    @MaltesePhoneticMarquee = []
+    @EnglishSentenceMarquee = []
+    
+    @sentence.each do |sentence|
+      @MalteseSentenceMarquee << sentence.maltese_sentence
+      @MaltesePhoneticMarquee << sentence.maltese_phonetic
+      @EnglishSentenceMarquee << sentence.english_sentence
+    end
+    
+  end
+
+
 end

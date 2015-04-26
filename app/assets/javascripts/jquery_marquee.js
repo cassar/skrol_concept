@@ -44,7 +44,7 @@ $(function(){
 $(function(){
    $("#target-language").click(function () {
       $(this).text(function(i, text){
-          return text === "-" ? "+" : "-";
+          return text === "+" ? "-" : "+";
       });
    });
 });
@@ -52,7 +52,7 @@ $(function(){
 $(function(){
    $("#target-phonetic").click(function () {
       $(this).text(function(i, text){
-          return text === "-" ? "+" : "-";
+          return text === "+" ? "-" : "+";
       });
    });
 });
@@ -60,7 +60,7 @@ $(function(){
 $(function(){
    $("#english").click(function () {
       $(this).text(function(i, text){
-          return text === "-" ? "+" : "-";
+          return text === "+" ? "-" : "+";
       });
    });
 });

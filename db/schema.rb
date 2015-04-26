@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424173837) do
+ActiveRecord::Schema.define(version: 20150426110821) do
 
   create_table "sentences", force: :cascade do |t|
     t.string   "english_sentence"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150424173837) do
     t.string   "chinese_traditional"
     t.string   "chinese_simplified"
     t.string   "chinese_phonetic"
-    t.string   "maltese"
+    t.string   "maltese_sentence"
     t.string   "maltese_phonetic"
   end
 
