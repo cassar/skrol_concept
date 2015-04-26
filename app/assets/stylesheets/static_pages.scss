@@ -38,3 +38,16 @@ body {
   padding-right: 1em;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#target-language, #target-phonetic, #english {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
