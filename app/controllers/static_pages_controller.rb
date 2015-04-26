@@ -136,7 +136,7 @@ class StaticPagesController < ApplicationController
     
     @sentence.each do |sentence|
       if sentence.maltese_sentence.nil? == true
-        sentence.chinese_traditional = translator.translate(sentence.english_sentence, :from => 'en', :to => 'mt')
+        sentence.maltese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'mt')
         sentence.save
       end  
     end  
