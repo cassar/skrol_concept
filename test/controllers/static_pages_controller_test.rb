@@ -6,6 +6,12 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "Skroll | Home"
   end
+  
+  test "should get english" do
+    get :english
+    assert_response :success
+    assert_select "title", "Skroll | English IPA"
+  end
 
   test "should get german" do
     get :german

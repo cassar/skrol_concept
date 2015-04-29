@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   get 'static_pages/home'
+  get    'english'   => 'static_pages#english'
   get    'japanese'   => 'static_pages#japanese'
   get    'german'   => 'static_pages#german'
   get    'portuguese'   => 'static_pages#portuguese'

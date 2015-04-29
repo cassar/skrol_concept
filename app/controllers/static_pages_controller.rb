@@ -1,8 +1,86 @@
 class StaticPagesController < ApplicationController
-  
-  
+
   def home
   end
+  
+  def english
+    
+    require 'httparty'
+    
+    #Translate word picking the first entry if there are a few
+    
+    def PearsonPhoneticLookup(english_word)
+      @phoneticWordArray = []
+      @englishWord = english_word
+      @PearsonHash = HTTParty.get("https://api.pearson.com/v2/dictionaries/ldoce5/entries?headword=#{@englishWord}.").parsed_response
+      
+      if @PearsonHash["count"] == 0
+        @phoneticWord = "###"
+        
+      elsif @PearsonHash["results"].count == 0
+        if @PearsonHash["results"]["pronunciations"].present? == true
+          @phoneticWord = @PearsonHash["results"]["pronunciations"][0]["ipa"] 
+        else
+          @phoneticWord = "**NoIpaPresent"
+        end  
+        if @phoneticWord.split.count > 1
+            @phoneticWord = @phoneticWord.split[0]
+            @phoneticWord = @phoneticWord[0, (@phoneticWord.length - 2)]
+        end  
+          
+      else 
+        @PearsonResultsCount = @PearsonHash["results"].count
+        @resultsCounter = 0
+        while @resultsCounter < @PearsonResultsCount
+          if @PearsonHash["results"][@resultsCounter]["pronunciations"].present? == true
+            @phoneticWordArray << @PearsonHash["results"][@resultsCounter]["pronunciations"][0]["ipa"]
+          end
+          @resultsCounter += 1
+        end
+        if @phoneticWordArray.count == 0
+          @phoneticWord = "**NoIpaPresent"
+        else
+          @phoneticWord = @phoneticWordArray[0]
+          if @phoneticWord.split.count > 1
+            @phoneticWord = @phoneticWord.split[0]
+            @phoneticWord = @phoneticWord[0, (@phoneticWord.length - 1)]
+          end  
+        end
+      end  
+      return @phoneticWord
+    end  
+    
+    #Translate stand alone sentence in to Phonetic Alphabet
+    
+    def PhoneticSentenceTranslate(english_sentence)
+      @englishSentenceArray = english_sentence.split
+      @englishPhoneticSentence = []
+      for element in @englishSentenceArray
+        @englishPhoneticSentence << PearsonPhoneticLookup(element)
+      end
+      return @englishPhoneticSentence.join(" ")
+    end
+    
+
+    @sentence = Sentence.all
+    
+    @sentence.each do |sentence|
+      if sentence.english_phonetic.nil? == true
+        sentence.english_phonetic = PhoneticSentenceTranslate(sentence.english_sentence)
+        sentence.save
+      end  
+    end  
+    
+    @EnglishPhoneticMarquee = []
+    @EnglishSentenceMarquee = []
+    
+    @sentence.each do |sentence|
+      @EnglishPhoneticMarquee << sentence.english_phonetic
+      @EnglishSentenceMarquee << sentence.english_sentence
+    end
+
+  end
+  
   
   def german
     
