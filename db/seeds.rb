@@ -92,6 +92,7 @@ sentences = Sentence.create(
 
 #http://www.treksplorer.com/foreign-language-survival-phrases/ 
 
+=begin
 sentences = Sentence.create( english_sentence: "Basic Phrases and Greetings" )
 sentences = Sentence.create( english_sentence: "Hello!" )
 sentences = Sentence.create( english_sentence: "How are you?" )
@@ -108,6 +109,8 @@ sentences = Sentence.create( english_sentence: "Nice to meet you." )
 sentences = Sentence.create( english_sentence: "Where are you from?" )
 sentences = Sentence.create( english_sentence: "I'm from." )
 sentences = Sentence.create( english_sentence: "I'd like to introduce my friend (wife) (husband)." )
+=end
+
 sentences = Sentence.create( english_sentence: "How old are you?" )
 sentences = Sentence.create( english_sentence: "I'm years old." )
 sentences = Sentence.create( english_sentence: "What do you do for a living?" )
@@ -116,6 +119,8 @@ sentences = Sentence.create( english_sentence: "What do you do for fun?" )
 sentences = Sentence.create( english_sentence: "I (don't) like." )
 sentences = Sentence.create( english_sentence: "Yes." )
 sentences = Sentence.create( english_sentence: "No." )
+
+=begin
 
 sentences = Sentence.create( english_sentence: "Language and Communication" )
 sentences = Sentence.create( english_sentence: "Do you speak?" )
@@ -210,3 +215,5 @@ sentences = Sentence.create( english_sentence: "Is there a pharmacy nearby?" )
 sentences = Sentence.create( english_sentence: "Can I use your phone?" )
 sentences = Sentence.create( english_sentence: "Call the police (ambulance)!" )
 sentences = Sentence.create( english_sentence: "Leave me alone!" )
+
+=end
