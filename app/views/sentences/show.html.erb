@@ -1,0 +1,50 @@
+<% provide(:title, @sentence.english_sentence) %>
+<div class="container">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Language</th>
+        <th>Sentence</th>
+        <th>Phonetic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English</td>
+        <td><%= @sentence.english_sentence %></td>
+        <td><%= @sentence.english_phonetic %></td>
+      </tr>
+      <tr>
+        <td>German</td>
+        <td><%= @sentence.german_sentence %></td>
+        <td><%= @sentence.german_phonetic %></td>
+      </tr>
+      <tr>
+        <td>Chinese</td>
+        <td><%= @sentence.chinese_traditional %></td>
+        <td><%= @sentence.chinese_simplified %></td>
+      </tr>
+      <tr>
+        <td>Japanese</td>
+        <td><%= @sentence.japanese_sentence %></td>
+        <td><%= @sentence.japanese_romaji %></td>
+      </tr>
+      <tr>
+        <td>Maltese</td>
+        <td><%= @sentence.maltese_sentence %></td>
+        <td><%= @sentence.maltese_phonetic %></td>
+      </tr>
+      <tr>
+        <td>Portuguese</td>
+        <td><%= @sentence.portuguese_sentence %></td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>Spanish</td>
+        <td><%= @sentence.portuguese_phonetic %></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<% provide(:title, 'Dashboard') %>
+<div class="container">
+  <div class="row">
+    <h1 class="col-md-10">Dashboard</h1>
+    <div class="col-md-2"><%= link_to 'New', new_sentence_path, class: "btn btn-default btn-new" %></div>
+  </div>
+  <br>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>English Sentence</th>
+        <th colspan="4"></th>
+      </tr>
+    </thead>
+    
+      <tbody>
+      <% @sentence.each do |sentence| %>
+        <tr>
+          <td><%= sentence.english_sentence %></td>
+          <td><%= link_to 'Show', sentence %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

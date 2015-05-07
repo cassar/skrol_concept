@@ -57,5 +57,5 @@ module StaticPagesHelper
     end
     return @englishPhoneticSentence.join(" ")
   end
-    
+  
 end

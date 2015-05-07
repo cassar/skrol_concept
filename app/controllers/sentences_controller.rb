@@ -12,7 +12,7 @@ class SentencesController < ApplicationController
   end
   
   def create
-    @sentence = Sentence.new(user_params)
+    @sentence = Sentence.new(sentence_params)
     if @sentence.save
       flash[:success] = "Entry Saved"
       redirect_to @sentence
@@ -20,10 +20,11 @@ class SentencesController < ApplicationController
       render 'new'
     end
   end
-
+  
   private
-
+  
     def sentence_params
-      params.require(:sentence).permit(:english_sentence, :english_phonetic, :german_sentence, :german_phonetic, :japanese_sentence, :japanese_romaji, :image)
+      params.require(:sentence).permit(:english_sentence)
     end
+
 end

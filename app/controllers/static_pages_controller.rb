@@ -27,7 +27,6 @@ class StaticPagesController < ApplicationController
 
   end
   
-  
   def german
     
     require 'bing_translator'
@@ -42,7 +41,7 @@ class StaticPagesController < ApplicationController
         sentence.save
       end  
     end  
-    
+
     @GermanSentenceMarquee = []
     @GermanPhoneticMarquee = []
     @EnglishSentenceMarquee = []
