@@ -6,16 +6,7 @@ class StaticPagesController < ApplicationController
   
   def english
     
-    require 'httparty'
-    
     @sentence = Sentence.all
-    
-    @sentence.each do |sentence|
-      if sentence.english_phonetic.nil? == true
-        sentence.english_phonetic = PhoneticSentenceTranslate(sentence.english_sentence)
-        sentence.save
-      end  
-    end  
     
     @EnglishPhoneticMarquee = []
     @EnglishSentenceMarquee = []
@@ -29,18 +20,7 @@ class StaticPagesController < ApplicationController
   
   def german
     
-    require 'bing_translator'
-    
     @sentence = Sentence.all
-    
-    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
-    
-    @sentence.each do |sentence|
-      if sentence.german_sentence.nil? == true
-        sentence.german_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'de')
-        sentence.save
-      end  
-    end  
 
     @GermanSentenceMarquee = []
     @GermanPhoneticMarquee = []
@@ -56,18 +36,7 @@ class StaticPagesController < ApplicationController
   
   def japanese 
     
-    require 'bing_translator'
-    
     @sentence = Sentence.all
-    
-    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
-    
-    @sentence.each do |sentence|
-      if sentence.japanese_sentence.nil? == true
-        sentence.japanese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'ja')
-        sentence.save
-      end  
-    end  
     
     @JapaneseSentenceMarquee= []
     @JapaneseRomajiMarquee = []
@@ -83,25 +52,7 @@ class StaticPagesController < ApplicationController
   
   def portuguese 
     
-    require 'bing_translator'
-    
     @sentence = Sentence.all
-    
-    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
-    
-    @sentence.each do |sentence|
-      if sentence.portuguese_sentence.nil? == true
-        sentence.portuguese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'pt')
-        sentence.save
-      end  
-    end 
-    
-    @sentence.each do |sentence|
-      if sentence.portuguese_phonetic.nil? == true
-        sentence.portuguese_phonetic = translator.translate(sentence.english_sentence, :from => 'en', :to => 'es')
-        sentence.save
-      end  
-    end  
     
     @PortugueseSentenceMarquee= []
     @PortuguesePhoneticMarquee = []
@@ -117,25 +68,7 @@ class StaticPagesController < ApplicationController
 
   def chinese
     
-    require 'bing_translator'
-    
     @sentence = Sentence.all
-    
-    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
-    
-    @sentence.each do |sentence|
-      if sentence.chinese_traditional.nil? == true
-        sentence.chinese_traditional = translator.translate(sentence.english_sentence, :from => 'en', :to => 'zh-CHT')
-        sentence.save
-      end  
-    end  
-    
-    @sentence.each do |sentence|
-      if sentence.chinese_simplified.nil? == true
-        sentence.chinese_simplified = translator.translate(sentence.english_sentence, :from => 'en', :to => 'zh-CHS')
-        sentence.save
-      end  
-    end  
     
     @ChineseTraditionalMarquee = []
     @ChineseSimplifiedMarquee = []
@@ -151,18 +84,7 @@ class StaticPagesController < ApplicationController
 
   def maltese
     
-    require 'bing_translator'
-    
     @sentence = Sentence.all
-    
-    translator = BingTranslator.new('SkrollApp', 'wQHWbTTe+glxEd5J16lkSgTSNz9C8M5Ca2z98HHG0sg=')
-    
-    @sentence.each do |sentence|
-      if sentence.maltese_sentence.nil? == true
-        sentence.maltese_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'mt')
-        sentence.save
-      end  
-    end  
     
     @MalteseSentenceMarquee = []
     @MaltesePhoneticMarquee = []
@@ -171,6 +93,22 @@ class StaticPagesController < ApplicationController
     @sentence.each do |sentence|
       @MalteseSentenceMarquee << sentence.maltese_sentence
       @MaltesePhoneticMarquee << sentence.maltese_phonetic
+      @EnglishSentenceMarquee << sentence.english_sentence
+    end
+    
+  end
+  
+  def norwegian
+    
+    @sentence = Sentence.all
+    
+    @NorseSentenceMarquee = []
+    @NorsePhoneticMarquee = []
+    @EnglishSentenceMarquee = []
+    
+    @sentence.each do |sentence|
+      @NorseSentenceMarquee << sentence.norse_sentence
+      @NorsePhoneticMarquee << sentence.norse_phonetic
       @EnglishSentenceMarquee << sentence.english_sentence
     end
     

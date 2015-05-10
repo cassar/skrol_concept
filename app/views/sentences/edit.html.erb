@@ -1,0 +1,37 @@
+<% provide(:title, "Edit Sentence") %>
+<div class="container">
+  <h1>Update Sentence</h1>
+  <div class="form-group"">
+  <table>
+    <tr>
+      <td>
+        <br>
+        <%= form_for(@sentence) do |f| %>
+          <%= f.label :english_sentence %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.text_field :english_sentence %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :english_phonetic %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.text_field :english_phonetic %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <br>
+          <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>

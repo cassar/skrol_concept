@@ -40,11 +40,18 @@
         <td><%= @sentence.portuguese_sentence %></td>
         <td></td>
       </tr>
-            <tr>
+      <tr>
         <td>Spanish</td>
         <td><%= @sentence.portuguese_phonetic %></td>
         <td></td>
       </tr>
+      <tr>
+        <td>Norwegian</td>
+        <td><%= @sentence.norse_sentence %></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
+  <%= link_to 'Edit', edit_sentence_path(@sentence), class: "btn btn-primary" %>
+  <%= link_to 'Back', sentences_path, class: "btn btn-primary" %>
 </div>

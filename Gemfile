@@ -17,6 +17,7 @@ gem 'turbolinks',              '2.3.0'
 gem 'jbuilder',                '2.2.3'
 gem 'bing_translator',         '~> 4.4.0'
 gem 'httparty',                '0.13.3'
+gem 'friendly_id',             '~> 5.1.0'
 gem 'sdoc',                    '0.4.0', group: :doc
 
 group :development, :test do
