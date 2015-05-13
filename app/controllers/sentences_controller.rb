@@ -10,7 +10,7 @@ class SentencesController < ApplicationController
   
   def index
     @sentence = Sentence.all
-    
+=begin
     require 'bing_translator'
     require 'httparty'
     
@@ -80,7 +80,8 @@ class SentencesController < ApplicationController
         sentence.norse_sentence = translator.translate(sentence.english_sentence, :from => 'en', :to => 'no')
         sentence.save
       end  
-    end  
+    end
+=end    
   end
   
   def create
