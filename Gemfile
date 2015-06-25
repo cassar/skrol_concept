@@ -19,6 +19,7 @@ gem 'bing_translator',         '~> 4.4.0'
 gem 'httparty',                '0.13.3'
 gem 'friendly_id',             '~> 5.1.0'
 gem 'sdoc',                    '0.4.0', group: :doc
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

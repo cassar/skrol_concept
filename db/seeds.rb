@@ -103,23 +103,22 @@ sentences = Sentence.create( english_sentence: "Cheers!" )
 sentences = Sentence.create( english_sentence: "Excuse me." )
 sentences = Sentence.create( english_sentence: "I'm sorry." )
 sentences = Sentence.create( english_sentence: "What's your name?" )
-sentences = Sentence.create( english_sentence: "My name is." )
+sentences = Sentence.create( english_sentence: "My name is Luke." )
 sentences = Sentence.create( english_sentence: "Nice to meet you." )
 sentences = Sentence.create( english_sentence: "Where are you from?" )
 sentences = Sentence.create( english_sentence: "I'm from Australia." )
 sentences = Sentence.create( english_sentence: "I'd like to introduce my friend." )
 sentences = Sentence.create( english_sentence: "How old are you?" )
-sentences = Sentence.create( english_sentence: "I'm 27 years old." )
+sentences = Sentence.create( english_sentence: "I'm twenty-seven years old." )
 sentences = Sentence.create( english_sentence: "What do you do for a living?" )
-sentences = Sentence.create( english_sentence: "I'm an stockbroker." )
+sentences = Sentence.create( english_sentence: "I'm a web developer." )
 sentences = Sentence.create( english_sentence: "What do you do for fun?" )
-sentences = Sentence.create( english_sentence: "I don't like green eggs and ham." )
 sentences = Sentence.create( english_sentence: "Yes." )
 sentences = Sentence.create( english_sentence: "No." )
 
-=begin
 
-sentences = Sentence.create( english_sentence: "Language and Communication" )
+
+
 sentences = Sentence.create( english_sentence: "Do you speak English?" )
 sentences = Sentence.create( english_sentence: "I don't understand." )
 sentences = Sentence.create( english_sentence: "I speak a little German" )
@@ -128,10 +127,10 @@ sentences = Sentence.create( english_sentence: "Could you please speak a little 
 sentences = Sentence.create( english_sentence: "Could you write that down?" )
 sentences = Sentence.create( english_sentence: "Could you repeat that?" )
 sentences = Sentence.create( english_sentence: "How do you say?" )
-sentences = Sentence.create( english_sentence: "What does mean?" )
+sentences = Sentence.create( english_sentence: "What does that mean?" )
 sentences = Sentence.create( english_sentence: "What time is it?" )
 sentences = Sentence.create( english_sentence: "It's five o'clock." )
-
+=begin
 sentences = Sentence.create( english_sentence: "Shopping and Money" ) 
 sentences = Sentence.create( english_sentence: "How much?" )
 sentences = Sentence.create( english_sentence: "I would like" )

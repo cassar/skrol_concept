@@ -1,0 +1,33 @@
+<img src= <%= @language_img %>  alt=<%= @target_language %> class="img-rounded">
+<br>
+<div class="row">
+  <div class="col-md-1">
+    <button type="button" class="btn btn-primary  btn-lg generator-toggle" id='target-language'>+</button>
+    <button type="button" class="btn btn-primary  btn-lg generator-toggle" id='target-phonetic'>+</button>
+    <button type="button" class="btn btn-primary  btn-lg generator-toggle" id='english'>+</button>
+  </div>
+  <div class="col-md-22">
+    <div class="marquee">
+      <table>
+        <tr class='target-language'>
+          <% @target_language_marquee.each do |sentence| %>
+          <td class='marquee-cell'><%= sentence %></td>
+          <% end %>
+        </tr>
+        <tr class= 'target-phonetic'>
+          <% @target_phonetic_marquee.each do |sentence| %>
+          <td class='marquee-cell'><%= sentence %></td>
+          <% end %>
+        </tr>
+        <tr class= 'english'>
+          <% @english_sentence_marquee.each do |sentence| %>
+          <td class='marquee-cell'><%= sentence %></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+<%= render 'static_pages/generator_controls'%>
+

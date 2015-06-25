@@ -1,11 +1,11 @@
 <% provide(:title, "Chinese") %>
 <% @target_language = "Chinese" %>
 <% @language_img = "https://www.allianz.com/v_1341399564000/media/about_us/where_we_are/taiwan.jpg" %>
-<% @target_language_marquee = @ChineseTraditionalMarquee %>
-<% @target_phonetic_marquee = @ChineseSimplifiedMarquee %>
+<% @target_language_marquee = @chinese_traditional_marquee %>
+<% @target_phonetic_marquee = @chinese_simplified_marquee %>
 <div class="jumbotron">
   <div class="container">
-    <%= render 'static_pages/generator_marquee'%>
+    <%= render 'static_pages/generator_marquee3'%>
   </div>
 </div>
 <%= render 'static_pages/feature_columns' %>

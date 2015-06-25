@@ -1,20 +1,16 @@
-<% provide(:title, "Home") %>
 <div class="jumbotron">
   <div class="container">
     <h2>Hello, Welcome to Skroll.</h2>
     <p>Please select which language you would like to learn below...</p>
     <br>
     <div class="row">
-      <%= link_to "English IPA", english_path, class: "btn btn-default btn-lg" %>
-    </div>
-    <br>
-    <div class="row">
-      <%= link_to "German", german_path, class: "btn btn-default btn-lg" %>
-      <%= link_to "Japanese", japanese_path, class: "btn btn-default btn-lg" %>
-      <%= link_to "Portuguese", portuguese_path, class: "btn btn-default btn-lg" %>
-      <%= link_to "Chinese", chinese_path, class: "btn btn-default btn-lg" %>
-      <%= link_to "Maltese", maltese_path, class: "btn btn-default btn-lg" %>
-      <%= link_to "Norwegian", norwegian_path, class: "btn btn-default btn-lg" %>
+      <%= link_to "Phonetic Alphabet", english_path, class: "btn btn-default btn-lg btn-home" %>
+      <%= link_to "German", german_path, class: "btn btn-default btn-lg btn-home" %>
+      <%= link_to "Japanese", japanese_path, class: "btn btn-default btn-lg btn-home" %>
+      <%= link_to "Portuguese", portuguese_path, class: "btn btn-default btn-lg btn-home" %>
+      <%= link_to "Chinese", chinese_path, class: "btn btn-default btn-lg btn-home" %>
+      <%= link_to "Maltese", maltese_path, class: "btn btn-default btn-lg btn-home" %>
+      <%= link_to "Norwegian", norwegian_path, class: "btn btn-default btn-lg btn-home" %>
     </div>
   </div>
 </div>

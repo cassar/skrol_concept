@@ -1,13 +1,11 @@
 module ApplicationHelper
-  
   # Returns the full title on a per-page basis.
   def full_title(page_title = '')
-  base_title = "Skroll"
+    base_title = 'Skroll'
     if page_title.empty?
-      base_title
+      "#{base_title}"
     else
-      "#{base_title} | #{page_title}"
+      "#{page_title} | #{base_title}"
     end
   end
-
 end
