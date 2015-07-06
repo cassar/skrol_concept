@@ -4,7 +4,7 @@
 
 $(document).on "page:change", ->
   
-    #HideShow Languages
+  #HideShow Languages
   $('#target-language').click ->
     $('.target-language').toggle()
 

@@ -7,10 +7,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select 'title', 'Skroll'
   end
 
-  test 'should get english' do
+  test 'should get phonetic alphabet' do
     get :english
     assert_response :success
-    assert_select 'title', 'English IPA | Skroll'
+    assert_select 'title', 'Phonetic Alphabet | Skroll'
   end
 
   test 'should get german' do
