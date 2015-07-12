@@ -1,0 +1,26 @@
+<% provide(:title, 'English Profile') %>
+<div class="container">
+  <div class="row">
+    <h1 class="col-md-10">English Profile</h1>
+  </div>
+  <br>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>English Sentence</th>
+        <th>English Phonetic</th>
+        <th colspan="4"></th>
+      </tr>
+    </thead>
+    
+      <tbody>
+      <% @sentence.each do |sentence| %>
+        <tr>
+          <td><%= sentence.english_sentence %></td>
+          <td><%= sentence.english_phonetic %></td>
+          <td><%= link_to 'Show', sentence %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

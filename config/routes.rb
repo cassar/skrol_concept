@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get    'chinese'    => 'static_pages#chinese'
   get    'maltese'    => 'static_pages#maltese'
   get    'norwegian'  => 'static_pages#norwegian'
-  resources :sentences
+  get    'english_profile' => 'languages#english_profile'
+  resources :sentences, :languages
   root 'static_pages#home'
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SiteLayoutTest < ActionDispatch::IntegrationTest
+  
   test 'layout links' do
     get root_path
     assert_template 'static_pages/home'
@@ -12,5 +13,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', chinese_path, count: 2
     assert_select 'a[href=?]', maltese_path, count: 2
     assert_select 'a[href=?]', sentences_path
+    assert_select 'a[href=?]', languages_path
   end
 end
