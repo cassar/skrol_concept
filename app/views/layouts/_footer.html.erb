@@ -19,9 +19,11 @@
           <ul>
             <li><%= link_to "Sentences", sentences_path %></li>
             <li><%= link_to "Languages", languages_path %></li>
+            <li><%= link_to "Snapshots", snapshots_path %></li>
           </ul>
         </div>
       </div>
     </nav>
+    <%= debug(params) if Rails.env.development? %>
   </div>
 </footer>

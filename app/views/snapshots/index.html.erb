@@ -1,0 +1,25 @@
+<% provide(:title, 'Snapshots') %>
+<div class="container">
+    <div class="row">
+      <h1 class="col-md-10">Snapshots</h1>
+      <div class="col-md-2"><%= link_to 'New', new_snapshot_path, class: "btn btn-default btn-new" %></div>
+  </div>
+  <br>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Snapshot</th>
+        <th colspan="4"></th>
+      </tr>
+    </thead>
+    
+      <tbody>
+      <% @snapshot.each do |snapshot| %>
+        <tr>
+          <td><%= snapshot.title %></td>
+          <td><%= link_to 'Show', snapshot %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

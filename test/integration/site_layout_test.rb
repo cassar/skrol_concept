@@ -14,5 +14,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', maltese_path, count: 2
     assert_select 'a[href=?]', sentences_path
     assert_select 'a[href=?]', languages_path
+    assert_select 'a[href=?]', snapshots_path
   end
 end

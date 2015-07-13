@@ -26,9 +26,8 @@ class SentencesController < ApplicationController
   end
 
   def update
-    @sentence = Sentence.find_by_id(params[:id])
+    @sentence = Sentence.find(params[:id])
     if @sentence.update_attributes(sentence_params)
-      flash[:success] = 'Sentence updated'
       redirect_to @sentence
     else
       render 'edit'

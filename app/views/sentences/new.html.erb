@@ -1,27 +1,13 @@
 <% provide(:title, 'New Sentence') %>
 <div class="container">
   <h1>New Sentence</h1>
-    <div class="form-group"">
-      <table>
-        <tr>
-          <td>
-            <br>
-            <%= form_for(@sentence) do |f| %>
-              <%= f.label :english_sentence %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <%= f.text_field :english_sentence %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <br>
-              <%= f.submit "Enter sentence", class: "btn btn-primary" %>
-            <% end %>
-          </td>
-        </tr>
-      </table>
-    </div>
+  <div class="form-group">
+    <br>
+    <%= form_for(@sentence) do |f| %>
+      <%= f.label :english_sentence %>
+      <%= f.text_field :english_sentence %>
+      <br>
+      <%= f.submit "Enter sentence", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

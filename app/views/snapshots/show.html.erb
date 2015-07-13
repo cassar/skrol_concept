@@ -1,0 +1,9 @@
+<% provide(:title, @snapshot.title) %>
+<div class="container">
+  <h1><%= @snapshot.title %></h1>
+  <h2><%= @snapshot.language %></h2>
+  <p><%= @snapshot.entry %></p>
+  <br>
+  <%= link_to 'Edit', edit_snapshot_path(@snapshot), class: "btn btn-primary" %>
+  <%= link_to 'Back', snapshots_path, class: "btn btn-primary" %>
+</div>

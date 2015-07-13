@@ -1,0 +1,14 @@
+<%= form_for (@snapshot) do |f| %>
+  <%= f.label :language %>
+  <%= f.select(:language, ['English', 'Maltese']) %>
+  <br>
+  <%= f.label :title %>
+  <br>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :entry %>
+  <br>
+  <%= f.text_field :entry %>
+  <br>
+  <%= f.submit "Save Snapshot", class: "btn btn-primary" %>
+<% end %>
