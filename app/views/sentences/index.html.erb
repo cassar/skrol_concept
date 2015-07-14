@@ -17,7 +17,8 @@
       <% @sentence.each do |sentence| %>
         <tr>
           <td><%= sentence.english_sentence %></td>
-          <td><%= link_to 'Show', sentence %></td>
+          <td><%= link_to 'Show', sentence %> | 
+          <%= link_to 'Delete', sentence, method: :delete, data: {confirm: 'You sure?'} %></td>
         </tr>
       <% end %>
     </tbody>

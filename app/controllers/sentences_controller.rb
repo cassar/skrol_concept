@@ -14,7 +14,6 @@ class SentencesController < ApplicationController
   def create
     @sentence = Sentence.new(sentence_params)
     if @sentence.save
-      flash[:success] = 'Entry Saved'
       redirect_to @sentence
     else
       render 'new'
@@ -32,6 +31,11 @@ class SentencesController < ApplicationController
     else
       render 'edit'
     end
+  end
+  
+  def destroy
+    Sentence.find(params[:id]).destroy
+    redirect_to sentences_url
   end
 
   private

@@ -6,7 +6,7 @@ class SnapshotEditTest < ActionDispatch::IntegrationTest
     @snapshot = snapshots(:entry_1)
   end
 
-  test 'successful edit' do
+  test 'successful snapshot edit' do
     get edit_snapshot_path(@snapshot)
     assert_template 'snapshots/edit'
     title = 'New Section Title'

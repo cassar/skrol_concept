@@ -6,6 +6,7 @@ class SnapshotsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_template 'snapshots/index'
+    assert_not_nil assigns(:snapshot)
     assert_select 'title', 'Snapshots | Skroll'
   end
 
