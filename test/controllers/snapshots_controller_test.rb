@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SnapshotsControllerTest < ActionController::TestCase
-
   test 'should get index' do
     get :index
     assert_response :success
@@ -16,5 +15,4 @@ class SnapshotsControllerTest < ActionController::TestCase
     assert_template 'snapshots/new'
     assert_select 'title', 'New Snapshot | Skroll'
   end
-  
 end

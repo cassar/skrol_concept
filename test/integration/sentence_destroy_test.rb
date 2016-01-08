@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SentenceDestroyTest < ActionDispatch::IntegrationTest
-  
   setup do
     @sentence = sentences(:sentence_1)
   end
@@ -13,7 +12,6 @@ class SentenceDestroyTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', sentence_path(@sentence), text: 'Delete'
     assert_difference 'Sentence.count', -1 do
       delete sentence_path(@sentence)
-    end  
+    end
   end
-
 end

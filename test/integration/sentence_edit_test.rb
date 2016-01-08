@@ -1,11 +1,10 @@
 require 'test_helper'
 
 class SentenceEditTest < ActionDispatch::IntegrationTest
-
   def setup
     @sentence = sentences(:sentence_1)
   end
-  
+
   test 'successful sentence edit' do
     get edit_sentence_path(@sentence)
     assert_template 'sentences/edit'

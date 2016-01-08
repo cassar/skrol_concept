@@ -1,0 +1,12 @@
+# This is the configuration used to check the rubocop source code.
+
+AllCops:
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false

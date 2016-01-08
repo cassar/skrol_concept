@@ -4,7 +4,7 @@ class LanguagesController < ApplicationController
 
   def index
   end
-  
+
   def english_profile
     @sentence = Sentence.all
   end

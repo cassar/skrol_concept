@@ -32,7 +32,7 @@ class SentencesController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     Sentence.find(params[:id]).destroy
     redirect_to sentences_url

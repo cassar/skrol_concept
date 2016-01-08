@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get    'english'    => 'static_pages#english'
-  get    'japanese'   => 'static_pages#japanese'
-  get    'german'     => 'static_pages#german'
-  get    'portuguese' => 'static_pages#portuguese'
-  get    'chinese'    => 'static_pages#chinese'
-  get    'maltese'    => 'static_pages#maltese'
-  get    'norwegian'  => 'static_pages#norwegian'
-  get    'english_profile' => 'languages#english_profile'
+  get 'english'    => 'static_pages#english'
+  get 'japanese'   => 'static_pages#japanese'
+  get 'german'     => 'static_pages#german'
+  get 'portuguese' => 'static_pages#portuguese'
+  get 'chinese'    => 'static_pages#chinese'
+  get 'maltese'    => 'static_pages#maltese'
+  get 'norwegian'  => 'static_pages#norwegian'
+  get 'english_profile' => 'languages#english_profile'
   resources :sentences, :languages, :snapshots
   root 'static_pages#home'
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

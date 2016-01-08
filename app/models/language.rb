@@ -4,5 +4,5 @@ class Language < ActiveRecord::Base
 end
 
 # Draft Schema for Migration
-# ID | Language_name | Corresponding Sentence foreign Key | 
-# Corresponding Sentence Phonetic Foreign key 
+# ID | Language_name | Corresponding Sentence foreign Key |
+# Corresponding Sentence Phonetic Foreign key

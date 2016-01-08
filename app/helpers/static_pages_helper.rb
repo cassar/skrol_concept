@@ -22,7 +22,7 @@ module StaticPagesHelper
           if  @pearson_result.length > 0 && @pearson_result.split.count > 1
             @result_sub_array = @pearson_result.split
             for element in @result_sub_array
-              @phonetic_word_array <<  [(@english_word.length - element.length).abs, element]
+              @phonetic_word_array << [(@english_word.length - element.length).abs, element]
             end
           end
           @phonetic_word_array << [(@english_word.length - @pearson_result.length).abs, @pearson_result]

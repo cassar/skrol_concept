@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SnapshotEditTest < ActionDispatch::IntegrationTest
-
   def setup
     @snapshot = snapshots(:entry_1)
   end
@@ -12,7 +11,7 @@ class SnapshotEditTest < ActionDispatch::IntegrationTest
     title = 'New Section Title'
     language = 'English'
     entry = 'New Entry Entry'
-    patch snapshot_path(@snapshot), snapshot: { 
+    patch snapshot_path(@snapshot), snapshot: {
       title: title,
       language: language,
       entry: entry
@@ -22,5 +21,5 @@ class SnapshotEditTest < ActionDispatch::IntegrationTest
     assert_equal title, @snapshot.title
     assert_equal language, @snapshot.language
     assert_equal entry, @snapshot.entry
-  end  
+  end
 end

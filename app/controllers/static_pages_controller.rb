@@ -142,7 +142,7 @@ class StaticPagesController < ApplicationController
       if sentence.norse_sentence.nil? == true
         sentence.norse_sentence = translator.translate(sentence.english_sentence, from: 'en', to: 'no')
         sentence.save
-      end 
+      end
       if sentence.norse_phonetic.nil? == true
         sentence.norse_phonetic = translator.translate(sentence.english_sentence, from: 'en', to: 'sv')
         sentence.save
