@@ -10,14 +10,14 @@ class SentencesControllerTest < ActionController::TestCase
     assert_response :success
     assert_template 'sentences/index'
     assert_not_nil assigns(:sentence)
-    assert_select 'title', 'Sentences | Skroll'
+    assert_select 'title', 'Sentences | Skrol'
   end
 
   test 'should get new' do
     get :new
     assert_response :success
     assert_template 'sentences/new'
-    assert_select 'title', 'New Sentence | Skroll'
+    assert_select 'title', 'New Sentence | Skrol'
   end
 
   test 'should create sentence' do

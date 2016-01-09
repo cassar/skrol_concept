@@ -1,3 +1,3 @@
-# Skroll Language App
+# Skrol Language App
 
-This is the Skroll Language App for language acquisition.
+This is the concept for the Skrol Language App for language acquisition.
