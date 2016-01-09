@@ -1,11 +1,11 @@
   <hr>
 <footer>
   <div class="container">
-    <p>© Skroll 2015</p>
+    <p>© Skroll <%= Time.now.year %></p>
     <nav>
       <div class="row">
         <div class="col-md-4">
-          <ul>  
+          <ul>
             <li><%= link_to "Phonetic Alphabet", english_path %></li>
             <li><%= link_to "German", german_path %></li>
             <li><%= link_to "Japanese", japanese_path %></li>
@@ -13,13 +13,6 @@
             <li><%= link_to "Chinese", chinese_path %></li>
             <li><%= link_to "Maltese", maltese_path %></li>
             <li><%= link_to "Norwegian", norwegian_path %></li>
-          </ul>
-        </div>
-        <div class=".col-md-4 .col-md-offset-4">
-          <ul>
-            <li><%= link_to "Sentences", sentences_path %></li>
-            <li><%= link_to "Languages", languages_path %></li>
-            <li><%= link_to "Snapshots", snapshots_path %></li>
           </ul>
         </div>
       </div>
