@@ -31,10 +31,6 @@ class StaticPagesController < ApplicationController
         sentence.german_sentence = translator.translate(sentence.english_sentence, from: 'en', to: 'de')
         sentence.save
       end
-      if sentence.german_phonetic.nil? == true
-        sentence.german_phonetic = translator.translate(sentence.english_sentence, from: 'en', to: 'nl')
-        sentence.save
-      end
     end
     @german_sentence_marquee = []
     @german_phonetic_marquee = []
